@@ -1,0 +1,32 @@
+/* components/picview/picview.wxss */
+.big-img{
+  min-width: 100%;
+  margin-bottom: 136rpx;
+}
+.bigbox{
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 98;
+  top: 0;
+  left: 0;
+}
+.close{
+  position: fixed;
+  z-index: 99;
+  bottom: 30rpx;
+  left: 5%;
+  width: 90%;
+  border-radius: 38rpx;
+  height: 76rpx;
+  line-height: 75rpx;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+}
+.imgbox{
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}

@@ -1,0 +1,144 @@
+/* pages/mine/mine.wxss */
+page {
+  background-color: rgba(0, 0, 0, 0.062);
+} 
+.userinfo {
+  display: flex;
+  /* position: relative; */
+  /* top: 0;
+  left: 0; */
+  /* margin: 15rpx 0; */
+  background: #2d60ac;
+  width: 100%;
+  height: 270rpx;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+ .userinfo-avatar {
+  /* position: absolute;
+  left: 40rpx;
+  top: 35rpx; */
+  width: 114rpx;
+  height: 114rpx;
+  margin: 30rpx 0 15rpx 0;
+  /* display: inline-block; */
+  border: 6rpx solid #fff;
+  border-radius: 50%;
+} 
+
+.userinfo-nickname {
+  /* position: absolute;
+  left: 210rpx;
+  top: 50rpx; */
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 40rpx;
+}
+
+.btn-list{
+  background: #fff;
+}
+.btn-hover{
+  background: #f8f8f8;
+}
+.btns{
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: left;
+  vertical-align: -webkit-baseline-middle;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-mybb{
+  /* position: absolute; 
+  top: 220rpx; */
+  margin: 0rpx 55rpx 0 55rpx;
+  /* padding: 0 55rpx; */
+  /* color: #2d60ac; */
+  border-bottom: 1rpx solid rgba(0,0,0,0.1);
+  /* border-top: 1rpx solid rgba(0,0,0,0.1); */
+}
+.btn-about{
+  /* position: absolute; 
+  top: 305rpx; */
+  margin: 0 55rpx 0 55rpx;
+  /* color: #2d60ac; */
+  /* border-bottom: 1rpx solid rgba(0,0,0,0.1); */
+}
+.btn-rule{
+  /* position: absolute; 
+  top: 305rpx; */
+  margin: 0rpx 55rpx 0 55rpx;
+  /* color: #2d60ac; */
+  border-bottom: 1rpx solid rgba(0,0,0,0.1);
+}
+.about-icon{
+  /* height: 50rpx;
+  line-height: 50rpx; */
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+}
+.about-text{
+  /* text-indent: 20rpx;
+  text-align: left; */
+  margin-left: 10rpx;
+  font-size: 35rpx;
+}
+.about-jflex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jingnum{
+  font-size: 30rpx;
+  color: #888;
+  /* height: 35rpx;
+  width: 200rpx;
+  line-height: 35rpx; */
+}
+.arrow-r{
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 10rpx;
+}
+/** 修改默认的navigator点击态 **/
+.navigator-hover {
+    color: #2d60ac;
+}
+/* .status{
+  width: 98%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 25rpx auto 0 auto;
+}
+.status-title{
+  width: 98%;
+  margin: 50rpx auto 0 auto;
+  text-align: center;
+  color: rgba(153, 153, 153, 0.534);
+  font-size: 30rpx;
+}
+.status-item{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  color: rgba(153, 153, 153, 0.534);
+  font-size: 25rpx;
+}
+.status-item-num{
+  font-size: 45rpx;
+  margin-right: 5rpx;
+} */
+/** 自定义其他点击态样式类 **/
+/* .other-navigator-hover {
+    color:red;
+} */

@@ -1,0 +1,13 @@
+/* components/countdown/countdown.wxss */
+.countdown-main{
+  text-align: center;
+  font-size: 30rpx;
+  width: 100%;
+  padding: 20rpx 0;
+  border-radius: 30rpx;
+  margin: 0 auto;
+  margin-top: 25rpx;
+  color:#fff;
+  box-shadow: 0 0 64px 1px rgba(61,88,130,.25);
+  background-image: -webkit-linear-gradient(top left,#8489ff,#fd4374,#fb928c,#fd4374,#8489ff);
+}

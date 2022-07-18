@@ -1,0 +1,18 @@
+<!--pages/wybb/wybb.wxml-->
+<view class='container'>
+<view class='wybb-title'>我要发表</view>
+<view class='wybb-input'>
+<input id='input-name' type='text' value='{{fromn}}' placeholder='你是谁？' bindinput='inputFromName'></input>
+<input id='input-towho' type='text' value='{{ton}}' placeholder='想要跟谁说？' bindinput='inputToName'></input>
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="selecttype">
+      {{index?'当前选择：'+array[index]:'请选择分类（默认表白）'}} ▾
+    </view>
+  </picker>
+<textarea id='wybb-text' maxlength='400' value='{{tsome}}' placeholder='想要说些什么？在这里写下来吧！请务必严格遵守《广东工商职业学院微墙守则》！' bindinput='inputToSome'></textarea>
+</view>
+<view class='imgbox' wx:if='{{hasImg}}'><image src='{{imgPath}}' mode='aspectFit' class='bbimg'></image><text class='del-img' bindtap='deleteImg'>删除图片</text></view>
+<button class='wybb-btn' bindtap='chooseImg'>{{hasImg?'更换':'选择'}}图片</button>
+<button class='wybb-btn' bindtap='uploadbb'>立即发表</button>
+</view>
+<getuserinfo id="getuserinfo" wx:if="{{showLogin}}" bindhidelogin="hideLogin"></getuserinfo>

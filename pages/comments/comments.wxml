@@ -1,0 +1,49 @@
+<!--pages/comments/comments.wxml-->
+<view class='c-container'>
+  <view class='comment-bb'>
+    <view class='bb-title'>
+      <text class='bbid'>#{{item.id}} </text>
+      <text class='from from-name-{{item.btype}}'>{{item.fromname}} </text>的 <text wx:if="{{item.type === 'nbb'}}">表白 </text>
+      <text wx:elif="{{item.btype === 'tc'}}">吐槽 </text>
+      <text wx:elif="{{item.btype === 'xy'}}">心愿 </text>
+      <text wx:elif="{{item.btype === 'sz'}}">晒照 </text>
+      <text wx:elif="{{item.btype === 'ot'}}">其它 </text>
+      <text wx:else>表白 </text>
+      <text class='top' wx:if="{{item.top=='31'||item.top=='32'}}">置顶</text> <text class='jing' wx:if="{{item.jing=='2'}}">精</text>
+      <text class='from' wx:if="{{item.state=='4'}}">(已屏蔽)</text>
+    </view>
+    <view class='to'>To {{item.toname}}：</view>
+    <view class='bbtext'>
+      <rich-text class='bb-richtext' nodes="{{item.tosome}}"></rich-text>
+      <image wx:if='{{item.picLink}}' class='bbpic' src="{{'https://wechat.gsdnxh.com/'+item.picLink}}" data-currentpic="{{'https://wechat.gsdnxh.com/'+item.picLink}}" mode='aspectFit' bindtap='sendSrc'></image>
+    </view>
+    <view class='bb-device'>
+      <text wx:if='{{item.realAgent && item.id>13161}}'>来自{{item.realAgent}}</text>
+    </view>
+    <view class='bb-time'>
+      <text>{{item.realtime}}</text>
+    </view>
+  </view>
+  <view class='comment-add'>
+    <view>
+      <input type='text' id='cm-input' placeholder='你是谁？' bindinput='inputWho'></input>
+      <textarea id='cm-textarea' placeholder='想说些什么？' bindinput='inputWhat'></textarea>
+      <button class='tc-btn' bindtap='postTucao'>发表吐槽</button>
+    </view>
+  </view>
+  <view class='total-tc' wx:if='{{comments[comments.length - 2]}}'>共{{comments[comments.length - 1]}}条吐槽</view>
+  <view class='comment-main' wx:if='{{comments[comments.length - 2]}}'>
+    <view class='comment-box' wx:for='{{comments}}' wx:key='{{index}}' wx:if='{{index < comments.length - 1}}'>
+      <view class='tc-top'>
+        <view class='tc-from'>{{item.from}}：</view>
+        <view class="tc-floor">#{{comments.length-index-1}}</view>
+      </view>
+      <view class='tucao'>{{item.tucao}}</view>
+      <view class='tc-time'>
+        <transdate class="time" id="transdate" date="{{item.time}}"></transdate>
+      </view>
+    </view>
+  </view>
+  <view class='no-comment' wx:else>快来成为第一条吐槽吧！</view>
+</view>
+<picview id="picview"></picview>

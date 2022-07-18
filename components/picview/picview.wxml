@@ -1,0 +1,2 @@
+<!--components/picview/picview.wxml-->
+<scroll-view scroll-y enable-back-to-top disable-scroll="true" style='height: 100%;width: 100%;' class='bigbox' hidden="{{!isShow}}"><view class='imgbox'><image class='big-img' src='{{piclink}}' mode='widthFix'></image></view><view class='close' bindtap='closePic'>关闭预览</view></scroll-view>

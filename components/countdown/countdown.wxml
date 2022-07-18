@@ -1,0 +1,4 @@
+<!--components/countdown/countdown.wxml-->
+<view class='countdown-main' wx:if='{{!expired && viewable}}'><view>距离{{title}}</view>
+<view>还有<text wx:if='{{lday > 0}}'>{{lday}}天</text><text wx:if='{{lhour > 0}}'>{{lhour}}时</text><text wx:if='{{lmin > 0}}'>{{lmin}}分</text><text wx:if='{{lday < 1}}'>{{lsec}}秒</text></view></view>
+<view class='countdown-main' wx:if="{{(!viewable || expired) && tips !== '0'}}">{{tips}}</view>

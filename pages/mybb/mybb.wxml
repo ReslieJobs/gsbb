@@ -1,0 +1,56 @@
+<!--pages/mybb/mybb.wxml-->
+<view class="container">
+  <view class="bb-detail" wx:if="{{bbdata[bbdata.length-3] > 0}}">
+    共发表了
+    <text>{{bbdata[bbdata.length-3]}}</text>条内容
+  </view>
+  <view class="bb-detail" wx:else>
+    还没有发表过任何内容，赶紧发表上墙吧！
+  </view>
+  <view class="usermotto bblist" wx:if="{{bbdata[bbdata.length-3] > 0}}">
+    <!-- <text class="user-motto">{{motto}}</text> -->
+    <view class="user-motto bb-main" wx:for="{{bbdata}}" wx:key="{{index}}" wx:if="{{index < bbdata.length - 4 && bbdata[bbdata.length - 5]}}">
+      <view class='from'>
+        <!-- <image src="../icons/head-normal.png" mode="scallToFill" class="head-nor" wx:if="{{item.fromname != '匿名'}}"></image>
+        <image src="../icons/head-noname.png" mode="scallToFill" class="head-nor" wx:else></image> -->
+        <text class="head-nor head-{{item.btype?item.btype:'nbb'}}" wx:if="{{item.btype === 'nbb' || item.btype === ''}}">表白</text>
+        <text class="head-nor head-{{item.btype}}" wx:elif="{{item.btype === 'ot'}}">其它</text>
+        <text class="head-nor head-{{item.btype}}" wx:elif="{{item.btype === 'tc'}}">吐槽</text>
+        <text class="head-nor head-{{item.btype}}" wx:elif="{{item.btype === 'sz'}}">晒照</text>
+        <text class="head-nor head-{{item.btype}}" wx:elif="{{item.btype === 'xy'}}">心愿</text>
+        <text class="user-motto from-name from-name-{{item.btype?item.btype:'nbb'}}">{{item.fromname}}</text>
+        <text class='time'>{{item.realtime}}</text>
+        <text class='agent' wx:if='{{item.id>13161 && item.realAgent}}'>来自{{item.realAgent}}</text>
+        <text class="floor-num"><text wx:if="{{item.state=='4'}}">已屏蔽</text><text class='top' wx:if="{{item.top=='31'||item.top=='32'}}">置顶</text> <text class='jing' wx:if="{{item.jing=='2'}}">精</text> #{{item.id}}</text>
+      </view>
+      <view class='bbtext'>
+        <text class="bbtext-title">{{'To '+item.toname+'：'}}</text>
+        <rich-text class='user-motto bbrich-text' nodes="{{item.tosome}}"></rich-text>
+        <image wx:if='{{item.picLink}}' class='bbpic' src="{{'https://wechat.gsdnxh.com/'+item.picLink}}" data-currentpic="{{'https://wechat.gsdnxh.com/'+item.picLink}}" mode='aspectFit' bindtap='sendSrc'></image>
+      </view>
+      <view class="bb-bottom">
+        <view class="port-btn" bindtap='doPort'>
+          <image src="../icons/warning.png" mode="scallToFill" class="bbbottom-icon"></image>投诉</view>
+        <view class="thumbs-btn" data-tid='{{item.id}}' bindtap='thumbsUp'>
+          <image src="../icons/like_fill.png" mode="scallToFill" class="bbbottom-icon" wx:if='{{item.isZan}}'></image>
+          <image src="../icons/like.png" mode="scallToFill" class="bbbottom-icon" wx:else></image>
+          {{item.zan}}</view>
+        <view class="comment-btn" data-id='{{item.id}}' data-from='{{item.fromname}}' data-text='{{item.tosome}}' data-item='{{item}}' bindtap='intoComment'>
+          <image src="../icons/message.png" mode="scallToFill" class="bbbottom-icon"></image>
+          <text>{{item.realpage}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="page" wx:if="{{bbdata[bbdata.length-4]!='1'}}">
+      <text class='page-text' bindtap='prePage'>上一页</text>
+      <view class='pageinput-box'>
+        <input class='pageinput' value='{{inputedPage}}' bindinput='inputPage' id='pageinput' type="text" placeholder='{{page}}'></input>
+      </view>
+      /{{bbdata[bbdata.length-4]}}
+      <text class='page-text' bindtap='nextPage'>下一页</text>
+      <text class='page-text' bindtap='jumpPage'>跳页</text>
+    </view>
+  </view>
+</view>
+<picview id="picview"></picview>
+<getuserinfo id="getuserinfo" wx:if='{{showLogin}}' bindhidelogin='hideLogin'></getuserinfo>

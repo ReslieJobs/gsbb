@@ -1,0 +1,55 @@
+<!--pages/mine/mine.wxml-->
+<view class="userinfo">
+  <!-- <block> -->
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <!-- </block> -->
+</view>
+<view class='btn-list'>
+<view class='hover' hover-class='btn-hover'>
+<view class="btn-mybb btns" bindtap="showMybb">
+  <!-- <icon type="waiting" size="15" color="#2d60ac" class="about-icon" /> -->
+  <view class="about-text">我发表的</view>
+  <image src='../icons/arrow-right.png' class="arrow-r" mode='aspectFit'></image>
+</view>
+</view>
+<view class='hover' hover-class='btn-hover'>
+<view class="btn-rule btns" bindtap="showJing">
+  <!-- <icon type="success" size="15" color="#2d60ac" class="about-icon" /> -->
+  <view class="about-text">只看精品</view>
+  <view class='about-jflex'>
+  <text class='jingnum'>共{{bbdata[bbdata.length-3]-1}}条</text>
+  <image src='../icons/arrow-right.png' class="arrow-r" mode='aspectFit'></image></view>
+</view>
+</view>
+<view class='hover' hover-class='btn-hover'>
+<view class="btn-rule btns" bindtap='intoRule'>
+  <!-- <icon type="warn" size="15" color="#2d60ac" class="about-icon" /> -->
+  <view class="about-text">微墙守则</view>
+  <image src='../icons/arrow-right.png' class="arrow-r" mode='aspectFit'></image>
+</view>
+</view>
+<view class='hover' hover-class='btn-hover'>
+<view class="btn-about btns" bindtap="showAbout">
+  <!-- <icon type="info" size="15" color="#2d60ac" class="about-icon" /> -->
+  <view class="about-text">关于</view>
+  <image src='../icons/arrow-right.png' class="arrow-r" mode='aspectFit'></image>
+</view>
+</view>
+</view>
+<!-- <view class='status-title'>数据总览</view>
+<view class='status'>
+<view class='status-item'>
+<text class='status-item-num'>13998</text>
+<text>内容</text>
+</view>
+<view class='status-item'>
+<text class='status-item-num'>998</text>
+<text>精品</text>
+</view>
+<view class='status-item'>
+<text class='status-item-num'>186596</text>
+<text>访问</text>
+</view>
+</view> -->
+<getuserinfo id="getuserinfo" wx:if="{{showLogin}}" bindhidelogin="hideLogin"></getuserinfo>

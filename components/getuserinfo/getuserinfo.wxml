@@ -1,0 +1,2 @@
+<!--components/getuserinfo/getuserinfo.wxml-->
+<view class='loginback'><button open-type="getUserInfo" class='loginbtn' bindgetuserinfo="hideBtn">授权登录</button></view>

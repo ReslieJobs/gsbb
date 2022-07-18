@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/mine/mine",
+    "pages/wybb/wybb",
+    "pages/comments/comments",
+    "pages/search/search",
+    "pages/idsearch/idsearch",
+    "pages/mybb/mybb",
+    "pages/about/about"
+  ],
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#2d60ac",
+    "list": [
+      {
+        "iconPath": "pages/icons/barrage.png",
+        "selectedIconPath": "pages/icons/barrage_fill.png",
+        "pagePath": "pages/index/index",
+        "position": "top",
+        "text": "首页"
+      },
+      {
+        "iconPath": "pages/icons/addition.png",
+        "selectedIconPath": "pages/icons/addition_fill.png",
+        "pagePath": "pages/wybb/wybb",
+        "text": "我要发表"
+      },
+      {
+        "iconPath": "pages/icons/people.png",
+        "selectedIconPath": "pages/icons/people_fill.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2d60ac",
+    "navigationBarTitleText": "广工商学院微墙",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx8abaf00ee8c3202e"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

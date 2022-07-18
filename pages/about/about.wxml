@@ -1,0 +1,15 @@
+<!--pages/about/about.wxml-->
+<view class='about-box'>
+  <image src='../icons/demo-logo.png' class='logo'></image>
+  <view class='title'>V1.0.1</view>
+</view>
+<view class='bottom'>
+  <view>公众号：zqgsdnxh</view>
+  <view>官网：www.xjdnxh.com</view>
+  <view>广东工商职业学院</view>
+  <view>电脑协会 版权所有</view>
+  <view>特别鸣谢：达叔</view>
+  <view>Writen By Reslie</view>
+  <view>Copyright © 2018 GDTBUCA.</view>
+  <view>All Rights Reserved.</view>
+</view>

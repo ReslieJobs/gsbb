@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "picview": "/components/picview/picview",
+    "getuserinfo": "/components/getuserinfo/getuserinfo"
+  }
+}

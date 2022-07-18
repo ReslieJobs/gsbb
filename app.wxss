@@ -1,0 +1,9 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  width: 92%;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 5rpx 0;
+  box-sizing: border-box;
+} 

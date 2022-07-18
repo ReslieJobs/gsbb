@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "transdate": "/components/transdate/transdate",
+    "picview": "/components/picview/picview"
+  }
+}

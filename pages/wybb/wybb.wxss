@@ -1,0 +1,80 @@
+/* pages/wybb/wybb.wxss */
+.wybb-title{
+  height: 120rpx;
+  text-align: center;
+  line-height: 120rpx;
+  color: #000;
+}
+.wybb-input{
+  width: 100%;
+  margin:0 auto 20rpx auto;
+  border-radius: 35rpx;
+}
+.wybb-input input{
+  box-sizing: border-box;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.062);
+  padding: 0 20rpx 0 20rpx;
+  background: #fff;
+  border-radius: 35rpx;
+  box-shadow: 0 0 64px 1px rgba(61,88,130,.25);
+}
+.selecttype{
+  box-sizing: border-box;
+  width: 100%;
+  height: 80rpx;
+  line-height: 76rpx;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+  padding: 0 20rpx 0 20rpx;
+  background: #fff;
+  border-radius:35rpx;
+  box-shadow: 0 0 64px 1px rgba(61,88,130,.25);
+}
+.wybb-input textarea{
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+  padding: 20rpx 16rpx 20rpx 20rpx;
+  background: #fff;
+  border-radius: 35rpx;
+  margin: 0 auto;
+  box-shadow: 0 0 64px 1px rgba(61,88,130,.25);
+}
+.wybb-btn{
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 35rpx;
+  color: #fff;
+  background: #2d60ac;
+  margin-bottom: 20rpx;
+  box-shadow: 0 0 64px 1px rgba(61,88,130,.25);
+}
+.imgbox{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35rpx;
+}
+.bbimg{
+  -webkit-align-items:center;
+  align-items:center;
+  -webkit-justify-content:center;
+  justify-content:center;
+  width: 300rpx;
+  height: 300rpx;
+  margin: 0 auto 0rpx auto;
+}
+.del-img{
+  -webkit-align-items:center;
+  align-items:center;
+  -webkit-justify-content:center;
+  justify-content:center;
+  text-align: center;
+  color: darkred;
+}
